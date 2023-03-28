@@ -1,0 +1,47 @@
+.card {
+  width: 20rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card.target-opponent {
+  background: rgb(196, 39, 81);
+}
+.card.target-self {
+  background: rgb(54, 166, 206);
+}
+.card .card-content {
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  background: rgb(252, 238, 226);
+  padding: 1rem;
+  font-family: "NewRodin";
+  line-height: 1.1;
+  font-size: 1.5rem;
+}
+.card .card-content .card-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card .card-content .card-wrapper h3 {
+  flex: 1;
+}
+.card .card-content .card-wrapper .card-body {
+  display: flex;
+  gap: 1rem;
+  font-family: "NewRodin";
+  color: rgb(42, 42, 55);
+  font-size: 0.75rem;
+  line-height: 1.1;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.card .card-content .card-wrapper .card-body button {
+  height: 2rem;
+  font-family: "NewRodin";
+  color: rgb(42, 42, 55);
+  font-size: 0.75rem;
+  line-height: 1.2;
+}/*# sourceMappingURL=card.css.map */

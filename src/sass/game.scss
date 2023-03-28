@@ -1,0 +1,301 @@
+@import 'utilities/variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.game {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 300%;
+        height: 300%;
+        top: -100%;
+        left: -100%;
+        z-index: -1;
+        background-image: url(../res/circuit5.png);
+        animation: bg-animation 100s linear infinite forwards;
+    }
+
+    &:has(.game-wrapper.finished) {
+        pointer-events: none;
+        &::before {
+            animation: none;
+        }
+    }
+
+    .game-wrapper {
+        height: 100%;
+        width: 100%;
+
+        .opponent-side, .user-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            gap: 3rem;
+            backdrop-filter: none;
+            transition: all .3s ease;
+            &.waiting {
+                backdrop-filter: hue-rotate(-20deg) saturate(0) invert(1) brightness(.2);
+            }
+        }
+
+        .opponent-side {
+            width: 100%;
+            height: 45%;
+            .status {
+                top: 0;
+                left: 0;
+                .status-wrapper {
+                    align-items: flex-start;
+                }
+            }
+        }
+        .user-side {
+            width: 100%;
+            height: 55%;
+            .status {
+                bottom: 0;
+                left: 0;
+                .status-wrapper {
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        .status {
+            position: absolute;
+            width: 100%;
+            height: 33%;
+            pointer-events: none;
+            .status-wrapper {
+                height: 100%;
+                width: 100%;
+                padding: 1rem;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                font-family: $font-pixel;
+                font-size: 3rem;
+                color: $secondary;
+                .energy {
+                    display: flex;
+                    flex-direction: column;
+                    grid-area: .5rem;
+                    align-items: flex-end;
+                    h3 {
+                        font-size: 2rem;
+                        margin-bottom: .5rem;
+                    }
+                    .energy-bar-container {
+                        height: .5rem;
+                        width: 15rem;
+                        background-color: $secondary;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 2px;
+                        .energy-bar {
+                            height: 100%;
+                            width: 100%;
+                            background:$tertiary;
+                            transition: all .6s ease;
+                        }
+                    }
+                }
+                .atk-and-def {
+                    display: flex;
+                    flex-direction: column;
+                    span:first-child{
+                        border-bottom: 4px solid $secondary;
+                    }
+                }
+            }
+        }
+
+        .activable-cards {
+            max-width: 80%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            overflow-x: scroll;
+            flex: 1;
+
+            &::-webkit-scrollbar {
+                background: transparent;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                background: $accent-soft;
+            }
+
+            .cards-wrapper {
+                height: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: 2rem;
+
+                .card-action {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    gap: .25rem;
+                    img {
+                        height: 2rem;
+                    }
+                    button {
+                        padding: 0;
+                        margin: 0;
+                        background: transparent;
+                        cursor: pointer;
+                        transition: all .3s ease;
+    
+                        &:hover {
+                            scale: 1.1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 100%;
+            margin-bottom: 1rem;
+            .actions-wrapper {
+                height: 4rem;
+                width: 50%;
+                display: flex;
+                gap: 2rem;
+                margin: 1rem 1rem;
+                
+                button {
+                    width: 100%;
+                    cursor: pointer;
+                    border: .25rem solid $secondary;
+                    background: rgb(45, 45, 45);
+                    color: $secondary;
+                    font-family: $font-main;
+                    font-size: 1rem;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        background: $tertiary;
+                    }
+                    &:active {
+                        scale: .95;
+                        transition: none;
+                    }
+                    &:disabled {
+                        color: rgb(100, 100, 100);
+                        scale: 1;
+                        background: rgb(45, 45, 45);
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+    .end-window {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+
+        .end-window-wrapper {
+            width: 50%;
+            height: 33%;
+            max-width: 30rem;
+            min-width: 15rem;
+            max-height: 20rem;
+            min-height: 15rem;
+            padding: 1rem;
+            border: .5rem solid $secondary;
+            font-family: $font-main;
+                font-size: 3rem;
+                line-height: 1.1;
+                text-align: center;
+display: flex;
+                flex-direction: column;
+                z-index: 101;
+                transition: all .3s ease;
+
+                button {
+                    width: 100%;
+                    height: 4rem;
+                    font-family: $font-main;
+                    font-size: 1.5rem;
+                    background: $tertiary;
+                    color: $secondary;
+                    border: .25rem solid $secondary;
+                    cursor: pointer;
+                    pointer-events: all;
+                    transition: all .3s ease;
+
+                    &:hover {
+                        background: transparent;
+                    }
+
+                    &:active {
+                        scale: .95;
+                        transition: none;
+                    }
+                }
+        }
+
+        &.won {
+            .end-window-wrapper {
+                background-color: $accent-soft;
+                color: $secondary;
+
+                h2 {
+                    filter: drop-shadow(-.5rem .5rem 0 $accent-strong);
+                    flex: 1;
+                }
+            }
+        }
+        &.lost {
+            .end-window-wrapper {
+                background-color: $accent-strong;
+                color: $secondary;
+
+                h2 {
+                    filter: drop-shadow(-.5rem .5rem 0 rgb(45,45,45));
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bg-animation {
+    0% {
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}

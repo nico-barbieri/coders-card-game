@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1, 
+        "name": "CODER_0",
+        "energy": 50,
+        "atk": 18,
+        "def": 12, 
+        "sprite": {
+            "profile": "",
+            "still": {
+                "up": "",
+                "down": "",
+                "left": "",
+                "right": ""
+            },
+            "run": {
+                "up": "",
+                "down": "",
+                "left": "",
+                "right": ""
+            }
+        }
+    },
+    {
+        "id": 2, 
+        "name": "Bobby",
+        "energy": 60,
+        "atk": 15,
+        "def": 15, 
+        "sprite": {
+            "profile": "",
+            "still": {
+                "up": "",
+                "down": "",
+                "left": "",
+                "right": ""
+            },
+            "run": {
+                "up": "",
+                "down": "",
+                "left": "",
+                "right": ""
+            }
+        }
+    }
+]

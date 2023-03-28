@@ -1,0 +1,35 @@
+/*fonts*/
+@font-face {
+    font-family: 'Pixel';
+    src: url(../font/visitor1.ttf) format('truetype');
+  }
+@font-face {
+    font-family: 'NewRodin';
+    font-weight: 100;
+    src: url(../font/FOT-NewRodin\ Pro\ L.otf) format('opentype');
+  }
+@font-face {
+    font-family: 'NewRodin';
+    font-weight: 200;
+    src: url(../font/FOT-NewRodin\ Pro\ M.otf) format('opentype');
+  }
+@font-face {
+    font-family: 'NewRodin';
+    font-weight: 300;
+    src: url(../font/FOT-NewRodin\ Pro\ DB.otf) format('opentype');
+  }
+@font-face {
+    font-family: 'NewRodin';
+    font-weight: 400;
+    src: url(../font/FOT-NewRodin\ Pro\ B.otf) format('opentype');
+  }
+@font-face {
+    font-family: 'NewRodin';
+    font-weight: 500;
+    src: url(../font/FOT-NewRodin\ Pro\ EB.otf) format('opentype');
+  }
+@font-face {
+    font-family: 'NewRodin';
+    font-weight: 600;
+    src: url(../font/FOT-NewRodin\ Pro\ UB.otf) format('opentype');
+  }

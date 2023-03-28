@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.game {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.game:before {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  z-index: -1;
+  background-image: url(../res/circuit5.png);
+  -webkit-animation: bg-animation 100s linear infinite forwards;
+          animation: bg-animation 100s linear infinite forwards;
+}
+.game:has(.game-wrapper.finished) {
+  pointer-events: none;
+}
+.game:has(.game-wrapper.finished)::before {
+  -webkit-animation: none;
+          animation: none;
+}
+.game .game-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.game .game-wrapper .opponent-side, .game .game-wrapper .user-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 3rem;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  transition: all 0.3s ease;
+}
+.game .game-wrapper .opponent-side.waiting, .game .game-wrapper .user-side.waiting {
+  -webkit-backdrop-filter: hue-rotate(-20deg) saturate(0) invert(1) brightness(0.2);
+          backdrop-filter: hue-rotate(-20deg) saturate(0) invert(1) brightness(0.2);
+}
+.game .game-wrapper .opponent-side {
+  width: 100%;
+  height: 45%;
+}
+.game .game-wrapper .opponent-side .status {
+  top: 0;
+  left: 0;
+}
+.game .game-wrapper .opponent-side .status .status-wrapper {
+  align-items: flex-start;
+}
+.game .game-wrapper .user-side {
+  width: 100%;
+  height: 55%;
+}
+.game .game-wrapper .user-side .status {
+  bottom: 0;
+  left: 0;
+}
+.game .game-wrapper .user-side .status .status-wrapper {
+  align-items: flex-end;
+}
+.game .game-wrapper .status {
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  pointer-events: none;
+}
+.game .game-wrapper .status .status-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-family: "Pixel";
+  font-size: 3rem;
+  color: #f1ede9;
+}
+.game .game-wrapper .status .status-wrapper .energy {
+  display: flex;
+  flex-direction: column;
+  grid-area: 0.5rem;
+  align-items: flex-end;
+}
+.game .game-wrapper .status .status-wrapper .energy h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.game .game-wrapper .status .status-wrapper .energy .energy-bar-container {
+  height: 0.5rem;
+  width: 15rem;
+  background-color: #f1ede9;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px;
+}
+.game .game-wrapper .status .status-wrapper .energy .energy-bar-container .energy-bar {
+  height: 100%;
+  width: 100%;
+  background: rgb(54, 166, 206);
+  transition: all 0.6s ease;
+}
+.game .game-wrapper .status .status-wrapper .atk-and-def {
+  display: flex;
+  flex-direction: column;
+}
+.game .game-wrapper .status .status-wrapper .atk-and-def span:first-child {
+  border-bottom: 4px solid #f1ede9;
+}
+.game .game-wrapper .activable-cards {
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow-x: scroll;
+  flex: 1;
+}
+.game .game-wrapper .activable-cards::-webkit-scrollbar {
+  background: transparent;
+}
+.game .game-wrapper .activable-cards::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgb(209, 168, 92);
+}
+.game .game-wrapper .activable-cards .cards-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+.game .game-wrapper .activable-cards .cards-wrapper .card-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+.game .game-wrapper .activable-cards .cards-wrapper .card-action img {
+  height: 2rem;
+}
+.game .game-wrapper .activable-cards .cards-wrapper .card-action button {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.game .game-wrapper .activable-cards .cards-wrapper .card-action button:hover {
+  scale: 1.1;
+}
+.game .game-wrapper .actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.game .game-wrapper .actions .actions-wrapper {
+  height: 4rem;
+  width: 50%;
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 1rem;
+}
+.game .game-wrapper .actions .actions-wrapper button {
+  width: 100%;
+  cursor: pointer;
+  border: 0.25rem solid #f1ede9;
+  background: rgb(45, 45, 45);
+  color: #f1ede9;
+  font-family: "NewRodin";
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.game .game-wrapper .actions .actions-wrapper button:hover {
+  background: rgb(54, 166, 206);
+}
+.game .game-wrapper .actions .actions-wrapper button:active {
+  scale: 0.95;
+  transition: none;
+}
+.game .game-wrapper .actions .actions-wrapper button:disabled {
+  color: rgb(100, 100, 100);
+  scale: 1;
+  background: rgb(45, 45, 45);
+  cursor: not-allowed;
+}
+.game .end-window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.game .end-window .end-window-wrapper {
+  width: 50%;
+  height: 33%;
+  max-width: 30rem;
+  min-width: 15rem;
+  max-height: 20rem;
+  min-height: 15rem;
+  padding: 1rem;
+  border: 0.5rem solid #f1ede9;
+  font-family: "NewRodin";
+  font-size: 3rem;
+  line-height: 1.1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 101;
+  transition: all 0.3s ease;
+}
+.game .end-window .end-window-wrapper button {
+  width: 100%;
+  height: 4rem;
+  font-family: "NewRodin";
+  font-size: 1.5rem;
+  background: rgb(54, 166, 206);
+  color: #f1ede9;
+  border: 0.25rem solid #f1ede9;
+  cursor: pointer;
+  pointer-events: all;
+  transition: all 0.3s ease;
+}
+.game .end-window .end-window-wrapper button:hover {
+  background: transparent;
+}
+.game .end-window .end-window-wrapper button:active {
+  scale: 0.95;
+  transition: none;
+}
+.game .end-window.won .end-window-wrapper {
+  background-color: rgb(209, 168, 92);
+  color: #f1ede9;
+}
+.game .end-window.won .end-window-wrapper h2 {
+  filter: drop-shadow(-0.5rem 0.5rem 0 rgb(196, 39, 81));
+  flex: 1;
+}
+.game .end-window.lost .end-window-wrapper {
+  background-color: rgb(196, 39, 81);
+  color: #f1ede9;
+}
+.game .end-window.lost .end-window-wrapper h2 {
+  filter: drop-shadow(-0.5rem 0.5rem 0 rgb(45, 45, 45));
+  flex: 1;
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}/*# sourceMappingURL=game.css.map */

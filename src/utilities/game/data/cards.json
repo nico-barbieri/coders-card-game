@@ -1,0 +1,502 @@
+[
+    {
+        "id": 1, 
+        "name": "Code Blade",
+        "target": "self",
+        "atk": 5, 
+        "def": 0, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 2, 
+        "name": "Power Surge",
+        "target": "self",
+        "atk": 8, 
+        "def": 0, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 3, 
+        "name": "Binary Blast",
+        "target": "self",
+        "atk": 5, 
+        "def": 3, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 4, 
+        "name": "Data Dagger",
+        "target": "self",
+        "atk": 10, 
+        "def": 2, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 5, 
+        "name": "Hacking Hammer",
+        "target": "self",
+        "atk": 10, 
+        "def": 5, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 6, 
+        "name": "Logic Lance",
+        "target": "self",
+        "atk": 1.2, 
+        "def": 1, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 7, 
+        "name": "Cyber Saber",
+        "target": "self",
+        "atk": 1.5, 
+        "def": 1, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 8, 
+        "name": "Quantum Quake",
+        "target": "self",
+        "atk": 1.8, 
+        "def": 1, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 9, 
+        "name": "Techno Thrasher",
+        "target": "self",
+        "atk": 1.5, 
+        "def": 1.2, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 10, 
+        "name": "Circuit Crusher",
+        "target": "self",
+        "atk": 2.5, 
+        "def": 1, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 11, 
+        "name": "Firewall Forcefield",
+        "target": "self",
+        "atk": 0, 
+        "def": 5, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 12, 
+        "name": "Encrypting Armor",
+        "target": "self",
+        "atk": 0, 
+        "def": 8, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 13, 
+        "name": "Digital Shield",
+        "target": "self",
+        "atk": 3, 
+        "def": 8, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 14, 
+        "name": "Malware Barrier",
+        "target": "self",
+        "atk": 5, 
+        "def": 10, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 15, 
+        "name": "Cybernetic Cloak",
+        "target": "self",
+        "atk": 0, 
+        "def": 15, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 16, 
+        "name": "Security Shell",
+        "target": "self",
+        "atk": 1, 
+        "def": 1.2, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 17, 
+        "name": "Nano Netting",
+        "target": "self",
+        "atk": 1, 
+        "def": 1.5, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 18, 
+        "name": "Circuit Shield",
+        "target": "self",
+        "atk": 1, 
+        "def": 1.8, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 19, 
+        "name": "Protection Protocol",
+        "target": "self",
+        "atk": 1.2, 
+        "def": 1.5, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 20, 
+        "name": "Stealth Suite",
+        "target": "self",
+        "atk": 1, 
+        "def": 2.5, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 21, 
+        "name": "Programmed Paralysis",
+        "target": "opponent",
+        "atk": 5, 
+        "def": 0, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 22, 
+        "name": "Code Corruption",
+        "target": "opponent",
+        "atk": 8, 
+        "def": 0, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 23, 
+        "name": "Logic Lockdown",
+        "target": "opponent",
+        "atk": 5, 
+        "def": 3, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 24, 
+        "name": "Malicious Malware",
+        "target": "opponent",
+        "atk": 10, 
+        "def": 2, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 25, 
+        "name": "Data Drain",
+        "target": "opponent",
+        "atk": 10, 
+        "def": 5, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 26, 
+        "name": "Cyber Curse",
+        "target": "opponent",
+        "atk": 0.8, 
+        "def": 1, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 27, 
+        "name": "Binary Blackout",
+        "target": "opponent",
+        "atk": 0.6, 
+        "def": 1, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 28, 
+        "name": "System Sabotage",
+        "target": "opponent",
+        "atk": 0.5, 
+        "def": 1, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 29, 
+        "name": "Hacking Hijack",
+        "target": "opponent",
+        "atk": 0.8, 
+        "def": 0.8, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 30, 
+        "name": "Quantum Quarantine",
+        "target": "opponent",
+        "atk": 0.5, 
+        "def": 0.8, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 31, 
+        "name": "Digital Disruptor",
+        "target": "opponent",
+        "atk": 0, 
+        "def": 5, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 32, 
+        "name": "Virus Vortex",
+        "target": "opponent",
+        "atk": 0, 
+        "def": 8, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 33, 
+        "name": "Nano Nuke",
+        "target": "opponent",
+        "atk": 3, 
+        "def": 8, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 34, 
+        "name": "Cyber Shock",
+        "target": "opponent",
+        "atk": 5, 
+        "def": 10, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 35, 
+        "name": "Logic Leech",
+        "target": "opponent",
+        "atk": 0, 
+        "def": 15, 
+        "cure": 0,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 36, 
+        "name": "System Shutdown",
+        "target": "opponent",
+        "atk": 1, 
+        "def": 0.8, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 37, 
+        "name": "Binary Bomb",
+        "target": "opponent",
+        "atk": 1, 
+        "def": 0.6, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 38, 
+        "name": "Malware Misdirection",
+        "target": "opponent",
+        "atk": 0.5, 
+        "def": 1, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 39, 
+        "name": "Code Collapse",
+        "target": "opponent",
+        "atk": 0.8, 
+        "def": 0.8, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 40, 
+        "name": "Hacking Havoc",
+        "target": "opponent",
+        "atk": 0.8, 
+        "def": 0.5, 
+        "cure": 0,
+        "isAMultiplier": true,
+        "turns": 1
+    },
+    {
+        "id": 41, 
+        "name": "Recharge Matrix",
+        "target": "self",
+        "atk": 0, 
+        "def": 0, 
+        "cure": 5,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 42, 
+        "name": "Power Flux Capacitor",
+        "target": "self",
+        "atk": 3, 
+        "def": 0, 
+        "cure": 5,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 43, 
+        "name": "Energy Restoration Network",
+        "target": "self",
+        "atk": 0, 
+        "def": 3, 
+        "cure": 5,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 44, 
+        "name": "Quantum Energy Injector",
+        "target": "self",
+        "atk": 2, 
+        "def": 2, 
+        "cure": 5,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 45, 
+        "name": "Overclocked Fusion Reactor",
+        "target": "self",
+        "atk": 0, 
+        "def": 0, 
+        "cure": 8,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 46, 
+        "name": "Hyperion Energy Core",
+        "target": "self",
+        "atk": 0, 
+        "def": 3, 
+        "cure": 8,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 47, 
+        "name": "Neural Energy Enhancer",
+        "target": "self",
+        "atk": 0, 
+        "def": 0, 
+        "cure": 12,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 48, 
+        "name": "Advanced Energy Conversion Module",
+        "target": "self",
+        "atk": 4, 
+        "def": 0, 
+        "cure": 12,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 49, 
+        "name": "Power Surge Stabilizer",
+        "target": "self",
+        "atk": 0, 
+        "def": 0, 
+        "cure": 16,
+        "isAMultiplier": false,
+        "turns": 1
+    },
+    {
+        "id": 50, 
+        "name": "Dark Energy Transmuter",
+        "target": "self",
+        "atk": 0, 
+        "def": 0, 
+        "cure": 20,
+        "isAMultiplier": false,
+        "turns": 1
+    }
+]

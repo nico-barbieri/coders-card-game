@@ -1,0 +1,51 @@
+@import "./utilities/variables";
+
+.card {
+  width: 20rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.target-opponent {
+    background: $accent-strong;
+  }
+
+  &.target-self {
+    background: $tertiary;
+  }
+  .card-content {
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    background: rgb(252, 238, 226);
+    padding: 1rem;
+    font-family: $font-main;
+    line-height: 1.1;
+    font-size: 1.5rem;
+    .card-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      h3 {
+        flex: 1;
+      }
+      .card-body {
+        display: flex;
+        gap: 1rem;
+        font-family: $font-main;
+        color: $primary;
+        font-size: 0.75rem;
+        line-height: 1.1;
+        justify-content: space-between;
+        align-items: flex-end;
+        button {
+          height: 2rem;
+          font-family: $font-main;
+        color: $primary;
+          font-size: 0.75rem;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
