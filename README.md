@@ -23,3 +23,7 @@ The result of the player's attack value minus the opponent's defense value is th
 - ### HOW TO WIN
 The game ends when one of the players loses all of their energy points. The surviving player wins.
 
+_________________________________________________
+
+**IMPORTANT:**
+*The game is still a work in progress and some bugs may occur during the computer's turn. Additionally, the game is missing various planned features.*
